@@ -1,0 +1,173 @@
+body {
+  margin: 0;
+  background-image: url("img/background.jpg");
+  background-size: cover;
+  word-wrap: break-word;
+}
+
+.container {
+  background-color: white;
+  min-height: 100vh;
+  max-width: 800px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-top: 10px solid blanchedalmond;
+  border-bottom: 10px solid blanchedalmond;
+}
+
+#input-task {
+  /* transition: padding-top 0.2s ease, margin-top 0.2s ease; */
+  width: 80%;
+  border: 1px solid blanchedalmond;
+}
+
+#input-task:focus-visible {
+  outline: rgb(231, 189, 126) solid 2px;
+}
+
+#btn-add {
+  border: none;
+  background-color: blanchedalmond;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+}
+
+#btn-add:hover {
+  /* background-color: cadetblue; */
+  transform: scale(1.2);
+}
+
+#btn-add:active {
+  background-color: #f3f4f6;
+  box-shadow: -1px 2px 5px rgba(81, 41, 10, 0.15),
+    0px 1px 1px rgba(81, 41, 10, 0.15);
+  transform: translateY(0.125rem);
+}
+
+.task-area {
+  border: 1px solid lightgray;
+  margin-top: 1em;
+}
+
+.task-status {
+  display: flex;
+  border-bottom: 1px solid lightgrey;
+  position: relative;
+}
+
+.task-status div {
+  cursor: pointer;
+  padding: 1em;
+}
+
+.task-status .delete-all-done {
+  display: none;
+  background-color: white;
+  border: none;
+}
+
+#underline {
+  background-color: pink;
+  width: 50px;
+  height: 4px;
+  position: absolute;
+  padding: 0;
+  left: 0px;
+  top: 53px;
+  transition: 0.5s;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  cursor: pointer;
+}
+
+.task div:first-child {
+  padding: 1em;
+  max-width: 600px;
+}
+
+.task-done {
+  background-color: rgb(230, 230, 230);
+}
+
+.title {
+  flex-grow: 1;
+}
+
+.task-complete {
+  text-decoration: line-through;
+  transition: 0.5s;
+}
+
+.btn-box {
+  display: flex;
+}
+
+.btn-box button {
+  height: 100%;
+  border: none;
+  width: 5em;
+  margin: 0;
+  background-color: white;
+  transition: 0.5s;
+}
+
+.btn-box button:first-child:hover {
+  background-color: greenyellow;
+}
+.btn-box button:nth-child(2):hover {
+  background-color: rgb(255, 0, 0, 0.3);
+}
+
+#modal {
+  width: 500px;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 0 2px rgba(68, 68, 69, 0.2);
+  background-color: rgb(244, 242, 242);
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+#modal .content {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.fa-check {
+  color: rgb(59, 194, 59);
+}
+
+.fa-undo-alt {
+  color: gray;
+}
+
+.fa-trash {
+  color: red;
+}
+
+@media screen and (max-width: 48rem) {
+  .btn-box button {
+    width: 3em;
+  }
+  .task div:first-child {
+    max-width: 253px;
+  }
+  .btn-box button:first-child:hover {
+    background-color: greenyellow;
+  }
+  .btn-box button:nth-child(2):hover {
+    background-color: rgb(255, 0, 0, 0.3);
+  }
+}
